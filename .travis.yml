@@ -4,7 +4,6 @@ gemfile: Gemfile
 script:
   - bundle install
   - bundle exec jekyll build --source ./ --destination ./_site --trace
-  - cp google432c376098419c1b.html ./_site
 deploy:
   # Use Github pages deploy process
   provider: pages
