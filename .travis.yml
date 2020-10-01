@@ -7,7 +7,6 @@ script:
   - bundle install
   - bundle exec jekyll build --source ./ --destination ./_site --trace
 deploy:
-  strategy: git
   # Use Github pages deploy process
   provider: pages
   # Keep builded pages
