@@ -1,10 +1,10 @@
 # main links
 main:
   - title: "Home"
-    url: https://dopewind.github.io
+    url: /
     description: "Go Home"
   - title: "About"
-    url: https://dopewind.github.io/about/
+    url: /about/
     description: "About Me"
   - title: "Posts"
     url: /year-archive/
@@ -12,9 +12,3 @@ main:
   - title: "Categories"
     url: /categories/
     description: "List categories"
-  - title: "Pages"
-    url: /page-archive/
-    description: "See Pages archive"
-  - title: "Collections"
-    url: /collection-archive/
-    description: "See collections archive"
