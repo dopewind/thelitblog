@@ -52,7 +52,7 @@ defaults:
       author_profile: true
 
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: disqus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
     shortname: thelitblog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
