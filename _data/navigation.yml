@@ -2,11 +2,19 @@
 main:
   - title: "Home"
     url: https://dopewind.github.io
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    description: "Go Home"
+  - title: "About"
+    url: https://dopewind.github.io/about/
+    description: "About Me"
+  - title: "Posts"
+    url: /year-archive/
+    description: "See Posts archive"
+  - title: "Categories"
+    url: /categories/
+    description: "List categories"
+  - title: "Pages"
+    url: /page-archive/
+    description: "See Pages archive"
+  - title: "Collections"
+    url: /collection-archive/
+    description: "See collections archive"
