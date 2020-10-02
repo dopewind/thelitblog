@@ -4,6 +4,7 @@ date: 2020-09-17 10:20:00 +/-TTTT
 categories: [blog]
 tags: [blog, welcome] # TAG names should always be lowercase
 pin: true
+toc: true
 ---
 
 Hey there

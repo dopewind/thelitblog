@@ -44,6 +44,7 @@ defaults:
       read_time: true
       share: true
       related: true
+      toc: true
   - scope:
       path: ""
       type: pages
@@ -52,9 +53,9 @@ defaults:
       author_profile: true
 
 comments:
-  provider: disqus # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider: "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname: thelitblog # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname: "thelitblog" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server: # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -116,7 +117,7 @@ social:
 
 # Analytics
 analytics:
-  provider: google # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider: "google" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id: "UA-178034944-1"
     anonymize_ip: # true, false (default)
@@ -124,7 +125,7 @@ analytics:
 # Site Author
 author:
   name: "Karthik Vinayan"
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar: "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio: "Chill out people"
   location: "India"
   email:
@@ -147,6 +148,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/ayinuu"
+    - label: "Telegram"
+      icon: "far fa-paper-plane"
+      url: "https://t.me/dopewind"
 
 # Site Footer
 footer:
