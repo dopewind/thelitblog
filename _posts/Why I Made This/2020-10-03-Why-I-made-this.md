@@ -2,10 +2,11 @@
 title: Why I made this ?
 date: 2020-10-03 15:34:00 +/-TTTT
 categories: [blog] # TAG names should always be lowercase
+tags: [featured]
 toc: true
 comments: true
 author: karthik
-image: assets/images/posts/Why I made this/why.jpg
+image: assets/images/posts/Why-I-made-this/why.jpg
 ---
 
 # Why I Made This ?
