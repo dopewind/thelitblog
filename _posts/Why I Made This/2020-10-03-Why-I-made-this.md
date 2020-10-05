@@ -1,8 +1,7 @@
 ---
 title: Why I made this ?
 date: 2020-10-03 15:34:00 +/-TTTT
-categories: [blog]
-tags: [featured] # TAG names should always be lowercase
+categories: [blog] # TAG names should always be lowercase
 toc: true
 comments: true
 author: karthik
