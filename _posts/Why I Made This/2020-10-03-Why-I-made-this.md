@@ -6,6 +6,7 @@ tags: [featured] # TAG names should always be lowercase
 toc: true
 comments: true
 author: karthik
+image: assets/images/posts/Why I made this/why.jpg
 ---
 
 # Why I Made This ?
