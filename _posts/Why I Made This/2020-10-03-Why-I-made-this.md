@@ -6,12 +6,14 @@ tags: [featured] # TAG names should always be lowercase
 toc: true
 comments: true
 author: karthik
-image: "assets/images/posts/Why I made this/why.gif"
+image: assets/images/posts/Why I made this/why.gif
 ---
 
 # Why I Made This ?
 
 Yes, seriously. This was the best title I could think (at that time anyway)
+
+
 
 
 
