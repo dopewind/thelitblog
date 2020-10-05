@@ -13,6 +13,8 @@ image: "assets/images/posts/Why I made this/why.gif"
 
 Yes, seriously. This was the best title I could think (at that time anyway)
 
+
+
 ## What is the point of this whole thing anyway ?
 
 I guess the main reason was that I needed something to kill time and occupy myself with, which is really stupid considering I plan to crack India's most craziest exam after school. If you really have nothing else to do and/or am as bored as I am feel free to read my previous post, in which I rant about all of this (in part at least)

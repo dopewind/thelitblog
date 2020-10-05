@@ -1,7 +1,7 @@
 ---
 title: First Words
 date: 2020-09-17 10:20:00 +/-TTTT
-categories: [blog]
+categories: [blog, welcome]
 tags: [sticky] # TAG names should always be lowercase
 toc: false
 comments: true
