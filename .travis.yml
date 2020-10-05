@@ -5,7 +5,6 @@ os: linux
 dist: focal
 script:
   - bundle install
-  - bundle update
   - bundle exec jekyll build --source ./ --destination ./_site --trace
 deploy:
   # Use Github pages deploy process
