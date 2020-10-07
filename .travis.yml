@@ -10,7 +10,7 @@ deploy:
   # Use Github pages deploy process
   provider: pages
   # Keep builded pages
-  skip-cleanup: true
+  cleanup: true
   # Directory where your generated files are located
   local_dir: _site
   # Github security/auth token
