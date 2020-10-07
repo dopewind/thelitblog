@@ -7,3 +7,4 @@ Gemfile.lock
 .jekyll-cache/
 vendor/
 log.txt
+/.bundle
