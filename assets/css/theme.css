@@ -43,7 +43,7 @@ a {
 }
 
 a.text-dark:hover {
-  color: #03a87c !important;
+  color: #03a87c;
 }
 
 .c-pointer:hover {
@@ -101,7 +101,7 @@ a.text-dark:hover {
 }
 
 .btn-round {
-  border-radius: 30px !important;
+  border-radius: 30px;
 }
 
 .btn {
@@ -114,7 +114,7 @@ a.text-dark:hover {
 
 .btn:hover,
 .btn:focus {
-  outline: 0 !important;
+  outline: 0;
 }
 
 .btn .badge {
@@ -229,7 +229,7 @@ a.text-dark:hover {
 }
 
 .input-round {
-  border-radius: 30px !important;
+  border-radius: 30px;
 }
 
 .input-group.input-round input:first-child {
@@ -246,7 +246,7 @@ a.text-dark:hover {
 }
 
 .navbar .highlight .nav-link {
-  color: #03a87c !important;
+  color: #03a87c;
   border: 1px solid #03a87c;
   padding: 0.3rem 1rem;
   border-radius: 3px;
@@ -255,7 +255,7 @@ a.text-dark:hover {
 
 .navbar .highlight .nav-link:hover {
   background: #03a87c;
-  color: #fff !important;
+  color: #fff;
 }
 
 .navbar-brand {
@@ -276,7 +276,7 @@ a.text-dark:hover {
 
 @media (min-width: 768px) {
   .dropdown-menu::before {
-    content: '';
+    content: "";
     top: -8px;
     position: absolute;
     left: 50px;
@@ -420,7 +420,12 @@ a.text-dark:hover {
 }
 
 .overlay-red::before {
-  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
+  background:
+    linear-gradient(
+      0deg,
+      rgba(44, 44, 44, 0.2),
+      rgba(224, 23, 3, 0.6)
+    );
 }
 
 .overlay-blue::before {
@@ -428,67 +433,67 @@ a.text-dark:hover {
 }
 
 .bg-primary {
-  fill: #03a87c !important;
+  fill: #03a87c;
 }
 
 .bg-secondary {
-  fill: #7832e2 !important;
+  fill: #7832e2;
 }
 
 .bg-success {
-  fill: #03a87c !important;
+  fill: #03a87c;
 }
 
 .bg-info {
-  fill: #09ebaf !important;
+  fill: #09ebaf;
 }
 
 .bg-warning {
-  fill: #ffde03 !important;
+  fill: #ffde03;
 }
 
 .bg-danger {
-  fill: #ea2f65 !important;
+  fill: #ea2f65;
 }
 
 .bg-light {
-  fill: #f8f9fa !important;
+  fill: #f8f9fa;
 }
 
 .bg-dark {
-  fill: #212529 !important;
+  fill: #212529;
 }
 
 .bg-white {
-  fill: #fff !important;
+  fill: #fff;
 }
 
 .bg-purple {
-  fill: #ad6edd !important;
+  fill: #ad6edd;
 }
 
 .bg-salmon {
-  fill: #ff977a !important;
+  fill: #ff977a;
 }
 
 .bg-cyan {
-  fill: #35bdff !important;
+  fill: #35bdff;
 }
 
 .bg-gray {
-  fill: #ced4da !important;
+  fill: #ced4da;
 }
 
 .bg-indigo {
-  fill: #502c6c !important;
+  fill: #502c6c;
 }
 
 .bg-orange {
-  fill: #fbb500 !important;
+  fill: #fbb500;
 }
 
 .bg-lightblue {
-  fill: #e8f3ec !important;
+  fill: #e8f3ec;
 }
 
 .card .date {
@@ -818,8 +823,8 @@ footer {
   top: 70px;
 }
 
-.homefirstpage .main-loop .main-loop-card:nth-child(-n+5) {
-  display: none !important;
+.homefirstpage .main-loop .main-loop-card:nth-child(-n + 5) {
+  display: none;
 }
 
 .excerpt {
@@ -923,7 +928,7 @@ article .h6 {
 }
 
 .a2a_default_style .a2a_svg {
-  border-radius: 50% !important;
+  border-radius: 50%;
   margin-top: 0.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -941,37 +946,37 @@ article .h6 {
   }
 
   .alertbar {
-    display: none !important;
+    display: none;
   }
 }
 
 @media (min-width: 992px) {
   .a2a_default_style a {
-    display: block !important;
-    float: none !important;
+    display: block;
+    float: none;
   }
 
   .a2a_default_style .a2a_svg {
-    border-radius: 50% !important;
-    display: block !important;
-    float: none !important;
+    border-radius: 50%;
+    display: block;
+    float: none;
     margin-top: 0.5rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   .a2a_svg {
-    height: 40px !important;
-    line-height: 40px !important;
-    width: 40px !important;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
   }
 
   .a2a_mini_services .a2a_svg,
   .a2a_menu_show_more_less .a2a_svg,
   .a2a_full .a2a_svg {
-    height: 20px !important;
-    line-height: 20px !important;
-    width: 20px !important;
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
   }
 }
 
@@ -1003,13 +1008,18 @@ a.a2a_i,
 i.a2a_i,
 .a2a_menu a.a2a_i:visited,
 .a2a_menu a.a2a_more {
-  font-size: 13px !important;
-  color: #999 !important;
+  font-size: 13px;
+  color: #999;
 }
-div.a2a_full_footer { display: none; }
+
+div.a2a_full_footer {
+  display: none;
+}
 
 @media (min-width: 1920px) {
-  html { font-size: 17px; }
+  html {
+    font-size: 17px;
+  }
 
   .container,
   .container-lg {
@@ -1027,6 +1037,6 @@ div.a2a_full_footer { display: none; }
   }
 
   .topfirstimage {
-    height: 280px !Important;
+    height: 280px;
   }
 }
