@@ -8,3 +8,4 @@ Gemfile.lock
 vendor/
 log.txt
 /.bundle
+.vscode/

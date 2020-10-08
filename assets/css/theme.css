@@ -66,8 +66,8 @@ a.text-dark:hover {
   }
 }
 
-.row.gap-y > .col,
-.row.gap-y > [class*="col-"] {
+.row.gap-y>.col,
+.row.gap-y>[class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -124,7 +124,7 @@ a.text-dark:hover {
 }
 
 .btn-lg,
-.btn-group-lg > .btn {
+.btn-group-lg>.btn {
   padding: 0.65rem 2rem;
   font-size: 1.15rem;
   line-height: 1.5;
@@ -132,7 +132,7 @@ a.text-dark:hover {
 }
 
 .btn-sm,
-.btn-group-sm > .btn {
+.btn-group-sm>.btn {
   padding: 0.15rem 0.7rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -310,8 +310,8 @@ a.text-dark:hover {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.navbar-light .navbar-nav .show > .nav-link,
-.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
   color: rgba(0, 0, 0, 0.9);
@@ -367,9 +367,6 @@ a.text-dark:hover {
 
   .jumbotron-xl {
     padding: 15rem 0;
-  }
-
-  .jumbotron-xl {
     min-height: 100vh;
   }
 
@@ -420,12 +417,9 @@ a.text-dark:hover {
 }
 
 .overlay-red::before {
-  background:
-    linear-gradient(
-      0deg,
+  background: linear-gradient(0deg,
       rgba(44, 44, 44, 0.2),
-      rgba(224, 23, 3, 0.6)
-    );
+      rgba(224, 23, 3, 0.6));
 }
 
 .overlay-blue::before {
@@ -800,7 +794,7 @@ ol.list-featured li {
 }
 
 ol.list-featured li::before {
-  content: "0" counter(my-awesome-counter);
+  content: "0"counter(my-awesome-counter);
   font-weight: bold;
   font-size: 2rem;
   margin-right: 0.5rem;
