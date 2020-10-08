@@ -9,7 +9,7 @@ author: karthik
 image: assets/images/posts/dark-s1/poster.jpg
 ---
 
-# DARK Season 1 : Explained !
+# DARK Season 1 : Explained
 
 ## The family tree
 

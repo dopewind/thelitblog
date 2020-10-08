@@ -9,7 +9,7 @@ author: karthik
 image: assets/images/posts/Why-I-made-this/why.jpg
 ---
 
-# Why I Made This ?
+# Why I Made This
 
 Yes, seriously. This was the best title I could think (at that time anyway)
 
@@ -23,11 +23,11 @@ I really am quite happy with how this thing looks, took quite some time to set i
 
 Anyway, I didn't had to go to much trouble to set all of this up, but again that's also because I like to do this. Aaahhh idk
 
-## Why do I change the look every so often?
+## Why do I change the look every so often
 
 tl;dr : I get bored
 
-## Did I abandon this ?
+## Did I abandon this
 
 This is here for two reasons
 
