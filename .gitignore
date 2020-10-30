@@ -9,3 +9,6 @@ vendor/
 log.txt
 /.bundle
 .vscode/
+
+.travis/id_rsa.pem
+.travis/identity.pem
