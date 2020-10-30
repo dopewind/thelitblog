@@ -12,8 +12,9 @@ commit_website_files() {
 }
 
 upload_files() {
+  git remote rm origin
   "git remote add origin https://${GITHUB_TOKEN_LIT}@github.com/thelitblog/thelitblog.github.io.git > /dev/null 2>&1"
-  git push --quiet --set-upstream origin gh-pages 
+  git push --quiet --set-upstream origin main 
 }
 
 setup_git
