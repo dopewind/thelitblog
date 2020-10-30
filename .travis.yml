@@ -6,21 +6,27 @@ dist: focal
 script:
   - bundle install
   - bundle exec jekyll build --source ./ --destination ./_site --trace
-deploy:
-  # Use Github pages deploy process
-  provider: pages
-  # Keep builded pages
-  skip-cleanup: true
-  # Directory where your generated files are located
-  local_dir: _site
-  # Github security/auth token
-  github-token: $GITHUB_TOKEN
-  # Incremental commit to keep old build/files from previous deployments
-  keep-history: true
-  # Git branch on which it should deploy (master, gh-pages, foo...)
-  target_branch: gh-pages
-  on:
-    # Which branch on commit/push will trigger deployment
-    branch: master
+
+
+after_success:
+  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then bash .travis/push.sh; fi'
+
+
+  # deploy:
+#   # Use Github pages deploy process
+#   provider: pages
+#   # Keep builded pages
+#   skip-cleanup: true
+#   # Directory where your generated files are located
+#   local_dir: _site
+#   # Github security/auth token
+#   github-token: $GITHUB_TOKEN
+#   # Incremental commit to keep old build/files from previous deployments
+#   keep-history: true
+#   # Git branch on which it should deploy (master, gh-pages, foo...)
+#   target_branch: gh-pages
+#   on:
+#     # Which branch on commit/push will trigger deployment
+#     branch: master
 rvm:
   - 2.4
