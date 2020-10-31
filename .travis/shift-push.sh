@@ -6,7 +6,15 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
-commit_country_json_files() {
+repo(){
+git clone https://github.com/thelitblog/thelitblog.github.io.git 
+cd thelitblog.github.io.git
+yes y | rm -rf *
+cp -r ../_site/ .
+}
+
+
+commit() {
   git checkout inverse
   # Current month and year, e.g: Apr 2018
   dateAndMonth=`date "+%b %Y"`
@@ -30,7 +38,7 @@ upload_files() {
 
 setup_git
 
-commit_country_json_files
+commit
 
 # Attempt to commit to git only if "git commit" succeeded
 if [ $? -eq 0 ]; then
