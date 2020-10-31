@@ -9,7 +9,7 @@ ssh-add identity.pem
 git remote add deploy git@github.com:thelitblog/thelitblog.github.io.git
 git rm -r --cached ./
 git checkout main
-git add _site/
+git add -f _site/
 git push deploy main
 
 
