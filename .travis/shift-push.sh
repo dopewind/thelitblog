@@ -20,7 +20,7 @@ commit() {
   dateAndMonth=`date "+%b %Y"`
   # Stage the modified files in dist/output
   git reset
-  cd _site && pwd && git add -f .
+  git add -f .
   pwd
   # Create a new commit with a custom build message
   # with "[skip ci]" to avoid a build loop
@@ -33,7 +33,7 @@ upload_files() {
   git remote rm origin
   # Add new "origin" with access token in the git URL for authentication
   git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1
-  git push origin inverse --quiet
+  git push origin inverse --quiet --force
 }
 
 setup_git
