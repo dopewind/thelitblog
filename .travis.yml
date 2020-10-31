@@ -15,6 +15,6 @@ deploy:
   - provider: script
     script: bash .travis/shift-push.sh
     on:
-      branch: shiftmore
+      branch: inverse
 rvm:
 - 2.4
