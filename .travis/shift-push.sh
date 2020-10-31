@@ -36,8 +36,9 @@ upload_files() {
   git push origin inverse --quiet --force
 }
 
-setup_git
 
+setup_git
+repo
 commit
 
 # Attempt to commit to git only if "git commit" succeeded
