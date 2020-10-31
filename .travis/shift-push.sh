@@ -11,6 +11,7 @@ git clone https://github.com/thelitblog/thelitblog.github.io.git
 cd thelitblog.github.io.git
 yes y | rm -rf *
 cp -r ../_site/ .
+ls
 }
 
 
@@ -19,9 +20,8 @@ commit() {
   # Current month and year, e.g: Apr 2018
   dateAndMonth=`date "+%b %Y"`
   # Stage the modified files in dist/output
-  git reset
+  ls
   git add -f .
-  pwd
   # Create a new commit with a custom build message
   # with "[skip ci]" to avoid a build loop
   # and Travis build number for reference
