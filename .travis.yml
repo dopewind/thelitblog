@@ -6,11 +6,15 @@ dist: focal
 script:
 - bundle install
 - bundle exec jekyll build --source ./ --destination ./_site --trace
-deploy:
-  provider: script
-  script: bash .travis/push.sh
-  on:
-    branch: master
 
+deploy:
+  - provider: script
+    script: bash .travis/push.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash .travis/shift-push.sh
+    on:
+      branch: shiftmore
 rvm:
 - 2.4

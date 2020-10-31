@@ -7,7 +7,7 @@ setup_git() {
 }
 
 commit_country_json_files() {
-  git checkout main
+  git checkout inverse
   # Current month and year, e.g: Apr 2018
   dateAndMonth=`date "+%b %Y"`
   # Stage the modified files in dist/output
@@ -24,7 +24,7 @@ upload_files() {
   git remote rm origin
   # Add new "origin" with access token in the git URL for authentication
   git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1
-  git push origin main --quiet
+  git push origin inverse --quiet
 }
 
 setup_git
