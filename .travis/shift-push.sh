@@ -12,7 +12,8 @@ commit_country_json_files() {
   dateAndMonth=`date "+%b %Y"`
   # Stage the modified files in dist/output
   git reset
-  git add -f ./_site/
+  cd _site && pwd && git add -f .
+  pwd
   # Create a new commit with a custom build message
   # with "[skip ci]" to avoid a build loop
   # and Travis build number for reference
