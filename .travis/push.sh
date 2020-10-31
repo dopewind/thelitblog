@@ -1,11 +1,16 @@
 #!/bin/sh
 
 
+git clone https://github.com/thelitblog/thelitblog.github.io.git
+cp -r _site/* ./thelitblog.github.io/
+
+
 openssl aes-256-cbc -K $encrypted_502dca1ab0b2_key -iv $encrypted_502dca1ab0b2_iv -in identity.pem.enc -out identity.pem -d
-git config advice.addIgnoredFile
 eval "$(ssh-agent -s)" #start the ssh agent
 chmod 600 .id_rsa.pem # this key should have push access
 ssh-add identity.pem
+
+cd thelitblog.github.io
 git remote add deploy git@github.com:thelitblog/thelitblog.github.io.git
 git rm -r --cached ./
 git checkout main
