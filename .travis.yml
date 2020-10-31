@@ -6,7 +6,7 @@ dist: focal
 script:
 - bundle install
 - bundle exec jekyll build --source ./ --destination ./_site --trace
-
+- ls -la
 deploy:
   - provider: script
     script: bash .travis/push.sh
