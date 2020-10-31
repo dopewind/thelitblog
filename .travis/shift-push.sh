@@ -8,7 +8,7 @@ setup_git() {
 
 repo(){
 git clone https://github.com/thelitblog/thelitblog.github.io.git 
-cd thelitblog.github.io.git
+cd thelitblog.github.io
 yes y | rm -rf *
 cp -r ../_site/ .
 ls
@@ -16,6 +16,14 @@ ls
 
 
 commit() {
+  ls
+  pwd
+
+  if [pwd==/home/travis/build/dopewind/dopewind.github.io]
+  then
+  	cd thelitblog.github.io
+  fi
+
   git checkout inverse
   # Current month and year, e.g: Apr 2018
   dateAndMonth=`date "+%b %Y"`
