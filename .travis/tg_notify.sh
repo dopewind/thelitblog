@@ -7,7 +7,7 @@ BOT_URL="https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage"
 PARSE_MODE="Markdown"
 
 # Use built-in Travis variables to check if all previous steps passed:
-if [ $TRAVIS_TEST_RESULT -ne 0 ]; then
+if "[ $TRAVIS_TEST_RESULT -ne 0 ]"; then
     build_status="failed"
 else
     build_status="succeeded"
@@ -16,7 +16,7 @@ fi
 # Define send message function. parse_mode can be changed to
 # HTML, depending on how you want to format your message:
 send_msg () {
-    curl -s -X POST ${BOT_URL} -d chat_id=$TELEGRAM_CHAT_ID \
+    curl -s -X POST ${BOT_URL} -d chat_id="$TELEGRAM_CHAT_ID" \
         -d text="$1" -d parse_mode=${PARSE_MODE}
 }
 
