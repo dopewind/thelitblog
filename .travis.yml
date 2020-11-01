@@ -7,27 +7,51 @@ dist: focal
 script:
   - bundle install
   - bundle exec jekyll build --source ./ --destination ./_site --trace
+  - ls -la
+  - echo "After install"
 
+after_script:
+  - bash .travis/tg_notify.sh
 
-after_success:
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" -a "$TRAVIS_BRANCH" = "master" ]; then bash .travis/push.sh; fi'
+before_deploy:
+  - ls -la
 
+deploy:
+  - provider: pages
+    #Push to different repo
+    repo: thelitblog/thelitblog.github.io
+    # Directory where your generated files are located
+    local_dir: ./_site/
+    # Github security/auth token
+    github-token: $GITHUB_TOKEN
+    # Incremental commit to keep old build/files from previous deployments
+    keep-history: true
+    # Git branch on which it should deploy (master, gh-pages, foo...)
+    target_branch: inverse
+    #Reminder that I was dumb
+    skip_cleanup: true
+    on:
+      # Which branch on commit/push will trigger deployment
+      branch: inverse
 
-  # deploy:
-#   # Use Github pages deploy process
-#   provider: pages
-#   # Keep builded pages
-#   skip-cleanup: true
-#   # Directory where your generated files are located
-#   local_dir: _site
-#   # Github security/auth token
-#   github-token: $GITHUB_TOKEN
-#   # Incremental commit to keep old build/files from previous deployments
-#   keep-history: true
-#   # Git branch on which it should deploy (master, gh-pages, foo...)
-#   target_branch: gh-pages
-#   on:
-#     # Which branch on commit/push will trigger deployment
-#     branch: master
+  - provider: pages
+    #Push to different repo
+    repo: thelitblog/thelitblog.github.io
+    # Directory where your generated files are located
+    local_dir: _site
+    # Github security/auth token
+    github-token: $GITHUB_TOKEN
+    # Incremental commit to keep old build/files from previous deployments
+    keep-history: true
+    #Reminder that I was dumb
+    skip_cleanup: true
+    # Git branch on which it should deploy (master, gh-pages, foo...)
+    target_branch: main
+    on:
+      # Which branch on commit/push will trigger deployment
+      branch: master
 rvm:
   - 2.4
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify

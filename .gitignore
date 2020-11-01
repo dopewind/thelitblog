@@ -12,3 +12,4 @@ log.txt
 
 .travis/id_rsa.pem
 .travis/identity.pem
+.travis/id.pem
