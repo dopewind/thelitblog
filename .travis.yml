@@ -3,17 +3,22 @@ cache: bundler
 gemfile: Gemfile
 os: linux
 dist: focal
+
 script:
 - bundle install
 - bundle exec jekyll build --source ./ --destination ./_site --trace
 - ls -la
+
+before_deploy:
+  - source .travis/shift-push.sh
+  
 deploy:
   - provider: script
     script: bash .travis/push.sh
     on:
       branch: master
   - provider: script
-    script: bash .travis/shift-push.sh
+    script: bash .travis/inverse.sh
     on:
       branch: inverse
 rvm:

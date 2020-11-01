@@ -7,13 +7,21 @@ setup_git() {
 }
 
 repo(){
-git clone https://github.com/thelitblog/thelitblog.github.io.git && cd thelitblog.github.io && /bin/rm -rf * && cp -r ../_site/ . && ls
+git clone https://github.com/thelitblog/thelitblog.github.io.git 
+cd thelitblog.github.io 
+/bin/rm -rf * 
+cp -r ../_site/ . 
+ls
 }
 
 
 commit(){
   dateAndMonth=`date "+%b %Y"`
-  cd thelitblog.github.io && git checkout inverse && ls && git add -f . && git commit -m "Travis update: $dateAndMonth (Build $TRAVIS_BUILD_NUMBER)" -m "[skip ci]"
+  cd thelitblog.github.io 
+  git checkout inverse 
+  ls 
+  git add -f . 
+  git commit -m "Travis update: $dateAndMonth (Build $TRAVIS_BUILD_NUMBER)" -m "[skip ci]"
   # Create a new commit with a custom build message
   # with "[skip ci]" to avoid a build loop
   # and Travis build number for reference
@@ -21,14 +29,15 @@ commit(){
 
 upload_files() {
   # Remove existing "origin"
-  cd thelitblog.github.io && git remote rm origin && git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1 && git push origin inverse --quiet --force
+  cd thelitblog.github.io
+  git remote rm origin 
+  git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1 
+  git push origin inverse --quiet --force
   # Add new "origin" with access token in the git URL for authentication
 }
 
 
-setup_git
-repo
-commit
+
 
 # Attempt to commit to git only if "git commit" succeeded
 if [ $? -eq 0 ]; then
