@@ -7,7 +7,7 @@ setup_git() {
 }
 
 repo(){
-git clone https://github.com/thelitblog/thelitblog.github.io.git 
+git clone https://github.com/thelitblog/thelitblog.github.io.git
 cd thelitblog.github.io
 yes y | rm -rf *
 cp -r ../_site/ .
@@ -18,8 +18,8 @@ ls
 commit() {
   ls
   pwd
-
-  if [pwd==/home/travis/build/dopewind/dopewind.github.io]
+  direc="/home/travis/build/dopewind/dopewind.github.io"
+  if [pwd==direc]
   then
   	cd thelitblog.github.io
   fi
