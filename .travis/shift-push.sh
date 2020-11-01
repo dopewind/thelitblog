@@ -7,41 +7,22 @@ setup_git() {
 }
 
 repo(){
-git clone https://github.com/thelitblog/thelitblog.github.io.git
-cd thelitblog.github.io
-/bin/rm -rf *
-cp -r ../_site/ .
-ls
+git clone https://github.com/thelitblog/thelitblog.github.io.git && cd thelitblog.github.io && /bin/rm -rf * && cp -r ../_site/ . && ls
 }
 
 
-commit() {
-  ls
-  pwd
-  direc="/home/travis/build/dopewind/dopewind.github.io"
-  if [pwd==direc]
-  then
-  	cd thelitblog.github.io
-  fi
-
-  git checkout inverse
-  # Current month and year, e.g: Apr 2018
+commit(){
   dateAndMonth=`date "+%b %Y"`
-  # Stage the modified files in dist/output
-  ls
-  git add -f .
+  cd thelitblog.github.io && git checkout inverse && ls && git add -f . && git commit -m "Travis update: $dateAndMonth (Build $TRAVIS_BUILD_NUMBER)" -m "[skip ci]"
   # Create a new commit with a custom build message
   # with "[skip ci]" to avoid a build loop
   # and Travis build number for reference
-  git commit -m "Travis update: $dateAndMonth (Build $TRAVIS_BUILD_NUMBER)" -m "[skip ci]"
 }
 
 upload_files() {
   # Remove existing "origin"
-  git remote rm origin
+  cd thelitblog.github.io && git remote rm origin && git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1 && git push origin inverse --quiet --force
   # Add new "origin" with access token in the git URL for authentication
-  git remote add origin https://dopewind:${GITHUB_TOKEN}@github.com/thelitblog/ > /dev/null 2>&1
-  git push origin inverse --quiet --force
 }
 
 
