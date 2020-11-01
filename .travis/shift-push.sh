@@ -9,7 +9,7 @@ setup_git() {
 repo(){
 git clone https://github.com/thelitblog/thelitblog.github.io.git
 cd thelitblog.github.io
-yes y | rm -rf *
+/bin/rm -rf *
 cp -r ../_site/ .
 ls
 }
