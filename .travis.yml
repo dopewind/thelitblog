@@ -13,7 +13,7 @@ deploy:
     on:
       branch: master
   - provider: script
-    script:source .travis/shift-push.sh
+    script: source .travis/shift-push.sh
     on:
       branch: inverse
 rvm:
