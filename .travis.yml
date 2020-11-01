@@ -7,8 +7,6 @@ dist: focal
 script:
   - bundle install
   - bundle exec jekyll build --source ./ --destination ./_site --trace
-  - ls -la
-  - echo "After install"
 
 after_script:
   - bash .travis/tg_notify.sh
@@ -28,7 +26,7 @@ deploy:
     keep-history: true
     # Git branch on which it should deploy (master, gh-pages, foo...)
     target_branch: inverse
-    #Reminder that I was dumb
+    # Reminder that I was dumb
     skip_cleanup: true
     on:
       # Which branch on commit/push will trigger deployment
