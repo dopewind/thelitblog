@@ -6,7 +6,7 @@ tags: [featured]
 toc: true
 comments: true
 author: karthik
-image: /assets/images/posts/Why-I-made-this/why.jpg
+image: assets/images/posts/Why-I-made-this/why.jpg
 ---
 
 # Why I Made This
